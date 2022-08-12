@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/camera_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.henry.ffmpegtestff.CameraTopView
+        android:id="@+id/cameraTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/backImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="16dp"
+        android:padding="10dp"
+        android:src="@mipmap/back_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <com.henry.ffmpegtestff.CaptureView
+        android:id="@+id/captureView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="20dp"
+        android:layout_width="82dp"
+        android:layout_height="82dp" />
+    <com.henry.ffmpegtestff.ShapeTextView
+        android:id="@+id/capture"
+        android:layout_width="82dp"
+        app:shape_radius="41dp"
+        android:layout_margin="20dp"
+        app:shape_solidColor="#aaffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="82dp" />
+    <com.henry.ffmpegtestff.ShapeTextView
+        android:id="@+id/captureTop"
+        android:layout_width="58dp"
+        app:shape_radius="29dp"
+        app:shape_solidColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/capture"
+        app:layout_constraintBottom_toBottomOf="@+id/capture"
+        app:layout_constraintLeft_toLeftOf="@+id/capture"
+        app:layout_constraintRight_toRightOf="@+id/capture"
+        android:layout_height="58dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
